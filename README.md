@@ -1,12 +1,12 @@
-# GPTCovLet
+# CandidateFit
 
-![License](https://img.shields.io/github/license/jaesungpark42/GPTCovLet)
+![License](https://img.shields.io/github/license/parkjson/CandidateFit)
 
 ![PyPI](https://img.shields.io/pypi/v/GPTCovLet)
 
-![Build Status](https://github.com/jaesungpark42/GPTCovLet/actions/workflows/build.yml/badge.svg)
+![Build Status](https://github.com/parkjson/CandidateFit/actions/workflows/build.yml/badge.svg)
 
-[![codecov](https://codecov.io/gh/jaesungpark42/GPTCovLet/branch/main/graph/badge.svg?token=X5BN0AAOZ1)](https://codecov.io/gh/jaesungpark42/GPTCovLet)
+[![codecov](https://codecov.io/gh/parkjson/CandidateFit/branch/main/graph/badge.svg?token=X5BN0AAOZ1)](https://codecov.io/gh/parkjson/CandidateFit)
 
 # Overview
 
@@ -24,4 +24,4 @@ Video Demonstration in Documentation
 
 ![Docs](https://readthedocs.org/projects/GPTCovLet/badge/?version=<version>&style=<style>A)
 
-https://jaesungpark42.github.io/GPTCovLetDocs/
+https://parkjson.github.io/GPTCovLetDocs/
