@@ -1,24 +1,34 @@
 [build-system]
 requires = [
-	"setuptools",
-	"setuptools-scm",
+	"setuptools>=61",
 	"wheel",
 ]
 build-backend="setuptools.build_meta"
 
 [project]
-name = "GPTCovLet"
-version = "0.1.2"
+name = "candidatefit"
+version = "0.2.0"
+description = "Scores how well your resume fits a job posting"
+readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.9"
 
 dependencies = [
+	"beautifulsoup4",
+]
+
+[project.optional-dependencies]
+pdf = [
+	"pypdf",
+]
+# Legacy LinkedIn scraper + cover letter script (GPT_Cov_Let)
+coverletter = [
 	"openai",
 	"selenium",
-	"bs4",
 	"webdriver-manager",
 ]
-[project.optional-dependencies]
 develop = [
+	"candidatefit[coverletter]",
 	"black>=23.1.0",
 	"pytest>=7.2.2",
 	"pytest-cov>=2.6.1",
@@ -26,8 +36,17 @@ develop = [
 	"wheel",
 ]
 
+[project.scripts]
+candidatefit = "candidatefit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/parkjson/CandidateFit"
+
+[tool.setuptools.packages.find]
+include = ["candidatefit*", "GPT_Cov_Let*"]
+
+[tool.setuptools.package-data]
+GPT_Cov_Let = ["tests/*.html"]
+
 [tool.pytest.ini_options]
-asyncio_mode = 'strict'
-testpaths = 'GPT_Cov_Let/tests'
-[tool.setuptools]
-py-modules = []
+testpaths = ["candidatefit/tests", "GPT_Cov_Let/tests"]

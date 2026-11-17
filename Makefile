@@ -14,11 +14,11 @@ install:  ## install library
 #lints
 
 lint:  ## run static analysis
-	python -m black --check GPT_Cov_Let setup.py
+	python -m black --check candidatefit GPT_Cov_Let setup.py
 lints: lint
 
 format:  ## run autoformatting with black
-	python -m black GPT_Cov_Let/ setup.py
+	python -m black candidatefit/ GPT_Cov_Let/ setup.py
 fix: format
 
 check:  ## check assets for packaging
@@ -29,8 +29,8 @@ checks: check
 #testing
 
 test: ## clean and run unit tests #pytest main.py --cov
-	python -m pytest -v GPT_Cov_Let/tests
+	python -m pytest -v
 tests: test
 
 coverage:  ## clean and run unit tests with coverage
-	python -m pytest -v GPT_Cov_Let/tests --cov=GPT_Cov_Let --cov-branch --cov-fail-under=50 --cov-report term-missing
+	python -m pytest -v --cov=candidatefit --cov=GPT_Cov_Let --cov-branch --cov-fail-under=50 --cov-report term-missing
